@@ -25,13 +25,13 @@ public class BookApplication {
 			tx = session.beginTransaction();
 
 			// Create new instance of Car and set values in it
-			Car car1 = new Car("BMW", "SDA231", 30221.00);
+			Book book1 = new Book("BMW", "SDA231", 30221.00);
 			// save the car
-			session.persist(car1);
+			session.persist(book1);
 			// Create new instance of Car and set values in it
-			Car car2 = new Car("Mercedes", "HOO100", 4088.00);
+			Book book2 = new Book("Mercedes", "HOO100", 4088.00);
 			// save the car
-			session.persist(car2);
+			session.persist(book2);
 
 			tx.commit();
 
@@ -49,10 +49,10 @@ public class BookApplication {
 
 			// retieve all cars
 			@SuppressWarnings("unchecked")
-			List<Car> carList = session.createQuery("from Car").list();
-			for (Car car : carList) {
-				System.out.println("brand= " + car.getBrand() + ", year= "
-						+ car.getYear() + ", price= " + car.getPrice());
+			List<Book> bookList = session.createQuery("from Car").list();
+			for (Book book : bookList) {
+				System.out.println("brand= " + book.getBrand() + ", year= "
+						+ book.getYear() + ", price= " + book.getPrice());
 			}
 			tx.commit();
 

@@ -24,5 +24,6 @@
 
         <!-- Mapping files -->
         <mapping class="hibernate.Car"/>   
+        <mapping class="hibernate.Book"/>   
       </session-factory>
 </hibernate-configuration>
